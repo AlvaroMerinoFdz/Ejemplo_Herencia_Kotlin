@@ -4,6 +4,9 @@ class Perro(nombre: String, raza: String, peso: Double, color: String) : Animal(
     fun sacarPaseo():String {
         return "El perro " + this.nombre + " se va a dar un paseíto."
     }
+    init {
+        this.nombre = "Perro " + this.nombre
+    }
 
     override fun hacerRuido(): String {
         return "El perro " + this.nombre + " ladra: GUAUU"

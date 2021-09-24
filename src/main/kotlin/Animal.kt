@@ -2,18 +2,20 @@ abstract class Animal(
     var nombre: String,
     var raza: String,
     var peso: Double,
-    var color: String,
-    var vacunado: Boolean = false
+    var color: String
 ) {
 
 
-    public fun vacunar() {
+    public fun vacunar(): String {
+        return this.nombre + " ha sido vacunado"
     }
 
-    public fun comer() {
+    public fun comer(): String {
+        return this.nombre + " está comiendo"
     }
 
-    public fun dormir() {
+    public fun dormir():String {
+        return this.nombre + " se va a echarse la siesta"
     }
 
     public abstract fun hacerRuido(): String
@@ -21,6 +23,6 @@ abstract class Animal(
 
 
     override fun toString(): String {
-        return this.javaClass.toString() + "Nombre: " + this.nombre + " , Raza: " + this.raza + " , Peso: " + this.peso + " Color: " + this.color
+        return  "\t Nombre: " + this.nombre + " , Raza: " + this.raza + " , Peso: " + this.peso + " Color: " + this.color
     }
 }

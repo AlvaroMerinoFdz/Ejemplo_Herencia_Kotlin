@@ -4,6 +4,9 @@ class Gato(nombre: String, raza: String, peso: Double, color: String) : Animal(n
     fun toserBolaPelo(): String {
         return "El gato " + this.nombre + " tose una bola de pelo."
     }
+    init {
+        this.nombre = "Gato " + this.nombre
+    }
 
     override fun hacerRuido(): String {
         return "El gato " + this.nombre + " maulla: MIAUU"
